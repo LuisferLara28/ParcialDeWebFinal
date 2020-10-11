@@ -1,0 +1,117 @@
+<!DOCTYPE Html>
+<html>
+
+<head>
+    <title>Registro de Asigaturas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body onload="load()">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="./Img/Logo universidad popular del cesar.png" width="150" height="50" class="d-inline-block align-top" alt="" loading="lazy">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./materia.html">Asignaturas</a>
+
+          </ul>
+        </div>
+      </nav>
+    <main class="main">
+        <section class="container">
+            <div class="row">
+                <div class="col-4">
+                        <form class="" id="inputData" onsubmit="return validar();">
+                            <br>
+                            <h1>Definitiva</h1>
+                            <hr>
+                            <div class="field-wrap">
+                                <label for="">Nombre Materia</label>
+                                <input type="text" required autocomplete="off" class="form-control"
+                                    placeholder="Ingrese Nombre de la Materia*" id="NombreMateria" maxlength="35" />
+                            </div>
+                           
+                            <div class="field-wrap">
+                                <label for="">Primer Corte -> 30%</label>
+                                <input type="text" id="PrimeraNota" name="PrimeraNota" placeholder="Ingrese Nota*" class="form-control" required maxlength="3" />
+                            </div>
+                            <div class="field-wrap">
+                                <label for="">Segundo Corte -> 30%</label>
+                                <input type="text" id="SegundaNota" name="SegundaNota" placeholder="Ingrese Nota*" class="form-control" required maxlength="3" />
+                            </div>
+                           
+                            <div class="field-wrap">
+                                <label for="">Tercer Corte -> 40%</label>
+                                <input type="text" id="TerceraNota" name="TerceraNota" placeholder="Ingrese Nota*" class="form-control" required maxlength="3" />
+                            </div>
+                           
+                            <h1>
+                                <button type="submit" class="button button-block" id="submit"
+                                    onclick="store()">Registar</button>
+                                <button type="submit" class="button button-block" class="btn btn-danger" id="clear"
+                                    onclick="clearFields()">Cancelar</button>
+                            </h1>
+                        </form>
+
+                </div>
+                <div class="col-8">
+                    <div class="container">
+                        <br>
+                        <h1>Lista De Notas</h1>
+                        <hr>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Numero</th>
+                                    <th scope="col">Materia</th>
+                                    <th scope="col">Primer Corte</th>
+                                    <th scope="col">Segundo corte</th>
+                                    <th scope="col">Terercer Corte</th>
+                                    <th scope="col">Definitiva</th>
+                                    <th scope="col">Editar</th>
+                                    <th scope="col">Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody id="userDetails"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+     </div>
+        </section>
+                
+    </main>
+ 
+
+    <script src="./js/Funciones.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0458944bda.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/javaS1.js"></script>
+
+
+</body>
+
+</html>
